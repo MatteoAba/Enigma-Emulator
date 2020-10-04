@@ -1,10 +1,6 @@
 # Emulatore Enigma
 
-<<<<<<< HEAD
-Emulatore della macchina utilizzata dai nazisti per criptare i messaggi durante la seconda guerra mondiale. Per vedere il funzionamento base della macchina vedere [HowWork](docs/HowItWorks.md).
-=======
 Emulatore della macchina utilizzata dai nazisti per criptare i messaggi durante la seconda guerra mondiale. Per vedere il funzionamento base della macchina vedere [How It Works](docs/HowItWorks.md).
->>>>>>> 1db30f243195a32d75521b2667a14c48e1e173dd
 
 ## Per Iniziare
 
