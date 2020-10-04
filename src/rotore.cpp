@@ -1,18 +1,20 @@
+#include <iostream>
 #include "struttura.h"
+using namespace std;
 
 void Rotore::copiaArray(const char *src, char *dst)
 {
-    src = new char[LEN];
+    dst = new char[LEN];
+    cout << endl;                                                                  // DEBUG
     
-    for (int i = 0; i < LEN; ++i)
+    for (int i = 0; i < LEN; ++i) {
         dst[i] = src[i];
+        cout << "src[" << i << "] = " << src[i] << " | ";                          // DEBUG
+    }
 }
 
 Rotore::Rotore(const char *s, const char *d)
 {
-    _sx = new char[LEN];
-    _dx = new char[LEN];
-
     copiaArray(s, _sx);
     copiaArray(d, _dx);
 }
@@ -20,6 +22,8 @@ Rotore::Rotore(const char *s, const char *d)
 int Rotore::trovaPos(char let, colonna col)
 {
     char *pun = (col) ? _dx : _sx;
+    cout << "\nColonna: " << col << endl;             // DEBUG
+    cout << "Prova pun[9]" << pun[9];                 // DEBUG
     int i;
 
     for (i = 0; i < LEN; ++i)
