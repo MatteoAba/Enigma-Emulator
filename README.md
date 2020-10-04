@@ -1,8 +1,8 @@
-# EMULATORE ENIGMA
+# Emulatore Enigma
 
 Emulatore della macchina utilizzata dai nazisti per criptare i messaggi durante la seconda guerra mondiale.
 
-## PER INIZIARE
+## Per Iniziare
 
 Per compilare l'emulatore sarà necessario semplicemente un compilatore C++.
 
@@ -24,6 +24,6 @@ g++ main.cpp -o emulatore
 emulatore
 ```
 
-## License
+## Licenza
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
