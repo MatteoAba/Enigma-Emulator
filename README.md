@@ -1,6 +1,6 @@
 # Emulatore Enigma
 
-Emulatore della macchina utilizzata dai nazisti per criptare i messaggi durante la seconda guerra mondiale. Per vedere il funzionamento base della macchina vedere [How It Works](docs/HowWork.md).
+Emulatore della macchina utilizzata dai nazisti per criptare i messaggi durante la seconda guerra mondiale. Per vedere il funzionamento base della macchina vedere [How It Works](docs/HowItWorks.md).
 
 ## Per Iniziare
 
