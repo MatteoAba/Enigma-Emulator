@@ -57,24 +57,28 @@ void Enigma::stampaStato()
 
 char Enigma::traduci(char let)
 {
+    // se è uno spazio, non lo traduco
+    if (let == ' ')
+        return let;
+    
     // ricavo la posizione della lettera da mandare in input al primo rotore
     int pos;
     for (pos = 0; pos < LEN; ++pos)
         if (LAYOUT[pos] == let)
             break;
-    
+
     // primo passaggio dai rotori (input a dx, output a sx)
     pos = _rots[2]->cambia(pos, dx);
-    pos = _rots[1]->cambia(pos, dx);
+    pos = _rots[1]->cambia(pos, dx);   
     pos = _rots[0]->cambia(pos, dx);
 
     // passo dal riflettore
     pos = _rif->rifletti(pos);
 
     // secondo passaggio dai rotori (input a sx, output a dx)
-    pos = _rots[0]->cambia(pos, dx);
-    pos = _rots[1]->cambia(pos, dx);
-    pos = _rots[2]->cambia(pos, dx);
+    pos = _rots[0]->cambia(pos, sx);
+    pos = _rots[1]->cambia(pos, sx);
+    pos = _rots[2]->cambia(pos, sx);
 
     // estraggo la lettera tradotta
     let = LAYOUT[pos];
@@ -89,5 +93,5 @@ char Enigma::traduci(char let)
 
 void Enigma::esecuzione(char *str)
 {
-    cout << "Traduzione : " << traduci(str[0]) << " " << traduci(str[0]) << endl;
+    cout << "Traduzione : " << traduci(str[0]) << " " << traduci(str[1]) << " " << traduci(str[2]) << endl;
 }

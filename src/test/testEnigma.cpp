@@ -19,7 +19,8 @@ void testEnigma()
 
     // faccio una traduzione
     char str[2];
-    printf("\nInserisci due caratteri da tradurre. [A-Z A-Z] : ");
-    cin >> str[0] >> str[1];
+    printf("\nInserisci tre caratteri da tradurre. [A-Z A-Z A-Z] : ");
+    cin >> str[0] >> str[1] >> str[2];
     E.esecuzione(str);
+    // E.stampaStato();
 }
