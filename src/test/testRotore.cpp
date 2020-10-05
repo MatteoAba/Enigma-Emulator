@@ -1,5 +1,4 @@
 #include <iostream>
-#include "../costanti.h"
 #include "../struttura.h"
 using namespace std;
 
@@ -15,9 +14,8 @@ void testRotore()
     cin >> let1;
     Rotore R(ROT[--pos1], LAYOUT, let1);
 
-    cout << "\nPROVA STAMPA ARRAY" << endl;
+    cout << "\nPROVA STAMPA ROTORE" << endl;
     R.stampaTutto();
-
 
     // TEST RICERCA DI POSIZIONE E LETTERA
     pos1 = R.trovaPos('A', dx);             

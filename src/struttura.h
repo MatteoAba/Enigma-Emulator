@@ -1,3 +1,5 @@
+#include "costanti.h"
+
 const int LEN = 26;
 enum colonna {sx, dx};                              // sx = 0, dx = 1
 
@@ -17,6 +19,13 @@ class Rotore {
         int cambia(int, colonna);                   // funzionamento del rotore
         void stampaTutto();             
 };
+
+class Riflettore : public Rotore {
+    public:
+        Riflettore(char let) : Rotore(Rif, LAYOUT, let) {}
+        int rifletti(int);                          // funzionamento del riflettore
+};
+
 /*
 class Enigma {
     private:

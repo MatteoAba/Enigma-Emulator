@@ -1,0 +1,2 @@
+void testRotore();
+void testRiflettore();

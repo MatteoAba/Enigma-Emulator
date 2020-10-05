@@ -1,9 +1,10 @@
 #include <iostream>
-#include "test\testRotore.h"
+#include "test\test.h"
 using namespace std;
 
 int main()
 {
-    testRotore();
+    // testRotore();
+    testRiflettore();
     return 0;
 }
