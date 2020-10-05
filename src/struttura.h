@@ -17,6 +17,7 @@ class Rotore {
         int trovaPos(char, colonna);                // dati lettera e colonna ne trova la posizione, tenendo conto dell'offset
         char trovaLet(int, colonna);                // dati posizione e colonna trova la lettera
         int cambia(int, colonna);                   // funzionamento del rotore
+        bool update();                              // fa ruotare di una posizione il rotore
         void stampaTutto();             
 };
 
@@ -37,11 +38,11 @@ class Enigma {
         Rotore *_rots[3];                           // 0 = ROS, 1 = ROC, 2 = ROD
         int _ordine[3];                             // memorizza l'ordine dei rotori                           
         Riflettore *_rif;   
-        // void traduci();                             // traduce una lettera in base all'impostazione
+        char traduci(char);                         // traduce una lettera in base all'impostazione
 
     public:
         Enigma();
         void setta(chiave);                         // permette di settare la macchina con una chiave
-        // void esecuzione();                          // funzionamento della macchina
+        void esecuzione(char*);                     // funzionamento della macchina
         void stampaStato();
 };

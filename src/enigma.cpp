@@ -53,3 +53,41 @@ void Enigma::stampaStato()
     printf("\nSTATO ROD:\n");
     _rots[2]->stampaTutto();
 }
+
+
+char Enigma::traduci(char let)
+{
+    // ricavo la posizione della lettera da mandare in input al primo rotore
+    int pos;
+    for (pos = 0; pos < LEN; ++pos)
+        if (LAYOUT[pos] == let)
+            break;
+    
+    // primo passaggio dai rotori (input a dx, output a sx)
+    pos = _rots[2]->cambia(pos, dx);
+    pos = _rots[1]->cambia(pos, dx);
+    pos = _rots[0]->cambia(pos, dx);
+
+    // passo dal riflettore
+    pos = _rif->rifletti(pos);
+
+    // secondo passaggio dai rotori (input a sx, output a dx)
+    pos = _rots[0]->cambia(pos, dx);
+    pos = _rots[1]->cambia(pos, dx);
+    pos = _rots[2]->cambia(pos, dx);
+
+    // estraggo la lettera tradotta
+    let = LAYOUT[pos];
+
+    // aggiorno la posizione di rotori
+    bool upd = _rots[2]->update();
+    if (upd) upd = _rots[1]->update();
+    if (upd) _rots[0]->update();
+
+    return let;
+}
+
+void Enigma::esecuzione(char *str)
+{
+    cout << "Traduzione : " << traduci(str[0]) << " " << traduci(str[0]) << endl;
+}

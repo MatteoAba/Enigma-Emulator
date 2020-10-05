@@ -15,5 +15,11 @@ void testEnigma()
 
     // setto Enigma e controllo lo stato
     E.setta(key);
-    E.stampaStato();
+    // E.stampaStato();
+
+    // faccio una traduzione
+    char str[2];
+    printf("\nInserisci due caratteri da tradurre. [A-Z A-Z] : ");
+    cin >> str[0] >> str[1];
+    E.esecuzione(str);
 }

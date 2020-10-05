@@ -55,6 +55,16 @@ int Rotore::cambia(int i, colonna c)
     return trovaPos(input, (c) ? sx : dx);
 }
 
+bool Rotore::update()
+{
+    _off = (_off + 1) % LEN;
+
+    // se ha completato il giro ritorna true, altrimenti false
+    if (!_off) 
+        return true;
+    return false;
+}
+
 void Rotore::stampaArray(char *pun)
 {
     for (int i = 0; i < LEN; ++i)
