@@ -20,7 +20,7 @@ Per compilare e avviare l'emulatore su windows si esegua:
 
 ```
 cd EmulatoreEnigma
-g++ main.cpp -o emulatore
+g++ main.cpp rotore.cpp riflettore.cpp enigma.cpp test\testEnigma.cpp -o emulatore
 emulatore
 ```
 

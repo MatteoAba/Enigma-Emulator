@@ -26,16 +26,22 @@ class Riflettore : public Rotore {
         int rifletti(int);                          // funzionamento del riflettore
 };
 
+struct chiave {
+    int ordine[3];                                  // ordine rotori
+    char letRot[3];                                 // lettere di partenza dei rotori    
+    char letRif;                                    // lettera di partenza del riflettore
+};
+
 class Enigma {
     private:
         Rotore *_rots[3];                           // 0 = ROS, 1 = ROC, 2 = ROD
         int _ordine[3];                             // memorizza l'ordine dei rotori                           
         Riflettore *_rif;   
-        void traduci();                             // traduce una lettera in base all'impostazione
+        // void traduci();                             // traduce una lettera in base all'impostazione
 
     public:
         Enigma();
-        void setta();                               // permette di risettare la macchina
-        void esecuzione();                          // funzionamento della macchina
+        void setta(chiave);                         // permette di settare la macchina con una chiave
+        // void esecuzione();                          // funzionamento della macchina
         void stampaStato();
 };

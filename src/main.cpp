@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     // testRotore();
-    testRiflettore();
+    // testRiflettore();
+    testEnigma();
     return 0;
 }
