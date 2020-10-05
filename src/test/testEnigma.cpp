@@ -18,9 +18,16 @@ void testEnigma()
     // E.stampaStato();
 
     // faccio una traduzione
-    char str[2];
-    printf("\nInserisci tre caratteri da tradurre. [A-Z A-Z A-Z] : ");
-    cin >> str[0] >> str[1] >> str[2];
+    char let;
+    vector<char> str;
+
+    printf("\nInserisci la stringa da tradurre. (mettere # come ultimo carattere) : ");
+    do {
+        cin >> let;
+        if (let == '#')
+            break;
+        str.push_back(let);
+    } while(1);
     E.esecuzione(str);
     // E.stampaStato();
 }

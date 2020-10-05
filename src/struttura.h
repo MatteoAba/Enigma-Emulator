@@ -1,4 +1,6 @@
+#include <vector>
 #include "costanti.h"
+using namespace std;
 
 const int LEN = 26;
 enum colonna {sx, dx};                              // sx = 0, dx = 1
@@ -43,6 +45,6 @@ class Enigma {
     public:
         Enigma();
         void setta(chiave);                         // permette di settare la macchina con una chiave
-        void esecuzione(char*);                     // funzionamento della macchina
+        void esecuzione(vector<char>);                     // funzionamento della macchina
         void stampaStato();
 };

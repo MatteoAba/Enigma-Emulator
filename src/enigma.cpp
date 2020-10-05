@@ -91,7 +91,12 @@ char Enigma::traduci(char let)
     return let;
 }
 
-void Enigma::esecuzione(char *str)
+void Enigma::esecuzione(vector<char> str)
 {
-    cout << "Traduzione : " << traduci(str[0]) << " " << traduci(str[1]) << " " << traduci(str[2]) << endl;
+    cout << "Traduzione : ";
+    int n = str.size();
+    for (int i = 0; i < n; ++i) {
+        cout << traduci(str[i]);
+    }
+    cout << endl;
 }
