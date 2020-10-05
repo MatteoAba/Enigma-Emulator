@@ -2,14 +2,12 @@
 #include "struttura.h"
 using namespace std;
 
-void Rotore::copiaArray(const char *src, char *dst)
+void Rotore::copiaArray(const char *src, char *&dst)
 {
     dst = new char[LEN];
-    cout << endl;                                                                  // DEBUG
     
     for (int i = 0; i < LEN; ++i) {
         dst[i] = src[i];
-        cout << "src[" << i << "] = " << src[i] << " | ";                          // DEBUG
     }
 }
 
@@ -22,8 +20,6 @@ Rotore::Rotore(const char *s, const char *d)
 int Rotore::trovaPos(char let, colonna col)
 {
     char *pun = (col) ? _dx : _sx;
-    cout << "\nColonna: " << col << endl;             // DEBUG
-    cout << "Prova pun[9]" << pun[9];                 // DEBUG
     int i;
 
     for (i = 0; i < LEN; ++i)
@@ -39,4 +35,17 @@ char Rotore::trovaLet(int pos, colonna col)
         return _dx[pos];
         
     return _sx[pos];
+}
+
+void Rotore::stampaArray(char *pun)
+{
+    for (int i = 0; i < LEN; ++i)
+        cout << pun[i] << ' ';
+    cout << endl;
+}
+
+void Rotore::stampaTutto()
+{   
+    stampaArray(_dx);
+    stampaArray(_sx);
 }
