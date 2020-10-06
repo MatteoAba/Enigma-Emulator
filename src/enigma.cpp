@@ -58,8 +58,8 @@ void Enigma::stampaStato()
 char Enigma::traduci(char let)
 {
     // se è uno spazio, non lo traduco
-    if (let == ' ')
-        return let;
+    if (let == '-')
+        return ' ';
     
     // ricavo la posizione della lettera da mandare in input al primo rotore
     int pos;
@@ -99,5 +99,5 @@ void Enigma::esecuzione(vector<char> str)
     for (int i = 0; i < n; ++i) {
         cout << traduci(str[i]);
     }
-    cout << endl;
+    cout << endl << endl;
 }
